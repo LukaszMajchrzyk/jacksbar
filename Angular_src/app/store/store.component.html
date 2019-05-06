@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+        <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=iso-8859-2">
+</head>
+
+
+ <div class="panel panel-default">
+
+  <div class="panel-heading"><span class="lead" >Lista magazynów </span></div>
+  <div class="panel-body">
+      <div class="table-responsive">
+            <table class="table">
+                    <thead>
+              <tr>
+                  <th>Numer magazynu</th>
+                  <th>Nazwa magazynu</th>
+                  <th>Data powstania</th>
+                  <!-- <th width="100"></th>
+                  <th width="100"></th> -->
+              </tr>
+              </thead>
+              <tbody>
+               
+                    <tr *ngFor="let store of storess">
+                 
+<td>MAG_{{store.store_id}}</td>
+<td>{{store.name}}</td>
+<td>{{store.date | date:short }}</td>
+                       
+              
+                  <td></td>
+                  <td><button type="button" ng-click="editUser(store.store_id)" class="btn btn-success custom-width btn-sm">Edycja</button></td>
+                  <td><button type="button" (click)="removeUser(store.store_id)" class="btn btn-danger custom-width btn-sm">Usuń</button></td>
+
+                  
+              </tr>
+              </tbody>
+          </table>      
+      </div>
+  </div>
+</div>
+
+
+<app-add-store></app-add-store>
+
+
+

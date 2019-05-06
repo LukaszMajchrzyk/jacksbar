@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+  <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=iso-8859-2">
+</head>
+
+
+<div class="panel panel-default">
+
+  <div class="panel-heading"><span class="lead">Receptury soków</span></div>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Lp.</th>
+            <th>Nazwa receptury</th>
+            <th>Nazwa surowca</th>
+            <th>Ilość surowca</th>
+            <th>Ilość soku [ml]</th>
+            <th>Cena</th>
+            <th>Ilość surowca na magazynie</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let item of recip">
+
+            <td>
+              <div *ngFor="let emp of recip">
+          <tr *ngFor="let items of emp.recip">
+            <td>{{items.recip_id }}</td>
+          </tr>
+    </div>
+    </td>
+
+    <td>
+      <div *ngFor="let emp of recip">
+        <tr *ngFor="let items of emp.recip">
+          <td>{{items.name }}</td>
+        </tr>
+      </div>
+    </td>
+
+    <td>{{item.name}}</td>
+
+
+    <td>
+      <div *ngFor="let emp of recip">
+        <tr *ngFor="let items of emp.recip">
+          <td>{{items.quantity_item }}</td>
+        </tr>
+      </div>
+    </td>
+
+    <td>
+      <div *ngFor="let emp of recip">
+        <tr *ngFor="let items of emp.recip">
+          <td>{{items.quantity }}</td>
+        </tr>
+      </div>
+    </td>
+
+    <td>
+      <div *ngFor="let emp of recip">
+        <tr *ngFor="let items of emp.recip">
+          <td>{{items.price }} zł</td>
+        </tr>
+      </div>
+    </td>
+
+    <td>{{item.quantity}}</td>
+
+    </tr>
+    </tbody>
+    </table>
+  </div>
+</div>
+</div>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+        <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=iso-8859-2">
+</head>
+
+
+ <div class="panel panel-default">
+
+  <div class="panel-heading"><span class="lead" >Lista Pracowników </span></div>
+  <div class="panel-body">
+      <div class="table-responsive">
+            <table class="table">
+                    <thead>
+              <tr>
+                  <th></th>
+                  <th>Lp.</th>
+                  <th>Id pracownika</th>
+                  <th>Imie</th>
+                  <th>Nazwisko</th>
+                  <th>Stanowisko</th>
+                  <th>Godziny</th>
+              </tr>
+              </thead>
+              <tbody>
+               
+                    <tr *ngFor="let employees of employee ; let i = index">
+                        <td><input type="checkbox" (change)="updateSelected($event.target.checked)" /></td>
+                        <td>{{i+1}} </td>
+<td>10000{{employees.idemployee}}</td>
+<td>{{employees.name}}</td>
+<td>{{employees.surename }}</td>
+<td>{{employees.role }}</td>
+
+
+<td> <div *ngFor="let emp of employee">
+    <div *ngFor="let hour of emp.employeehours">
+      {{hour.quantity}}
+    </div>
+    </div>
+
+</td>
+
+                       
+              
+                  <td></td>
+                  <td><button type="button" ng-click="editUser(employees.store_id)" class="btn btn-success custom-width btn-sm">Edycja</button></td>
+                  <td><button type="button" click=employeeReport() class="btn btn-primary custom-width btn-sm">Raportuj godziny</button></td>
+
+                  
+              </tr>
+              </tbody>
+          </table>      
+      </div>
+  </div>
+</div>
+<button class="btn btn-success" (click)="getTests()">Test</button>
+
+{{info}}
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+ <div *ngFor="let emp of employee">
+    <p>Name: {{emp.name}} {{emp.surename}}</p>
+    <div *ngFor="let hour of emp.employeehours">
+      <p>Date: {{hour.date | date: 'shortDate'}}</p>
+      <p>Quantity: {{hour.quantity}}</p>
+    </div>
+</div> -->
+    
+    
+
+
+
+
+
+

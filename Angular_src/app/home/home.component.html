@@ -1,0 +1,42 @@
+<div *ngIf="info.token; else loggedOut">
+
+
+<!-- 
+  <h5 class="text-primary">Your Information</h5>
+
+
+  <p>
+    <strong>Username:</strong> {{info.username}}<br/>
+    <strong>Roles:</strong> {{info.authorities}}<br />
+    <strong>Token:</strong> {{info.token}}.
+  </p>
+  <button class="btn btn-secondary" (click)="logout()">Logout</button>
+-->
+
+<h1 style="color: #5e9ca0;">Jack's Bar - aplikacja do zarządzania barem z sokami</h1>
+<h2 style="color: #2e6c80;">To do :</h2>
+<p>- realizacja zam&oacute;wień</p>
+<p>- saldo dzienne</p>
+<p>- rozliczanie towaru w zam&oacute;wieniach</p>
+<p>&nbsp; <span style="background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;">Funkcjonalność</span> jest dodanawa systematycznie</p>
+<h2 style="color: #2e6c80;">&nbsp;</h2>
+
+
+<footer class="page-footer font-small special-color-dark pt-4">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div class="footer-copyright text-center py-3">© 2019 Copyright: Łukasz Majchrzyk
+  </div>
+
+</footer>
+
+
+
+
+
+</div>  
+
+
+<ng-template #loggedOut>
+    Proszę się zalogować
+  </ng-template>

@@ -1,0 +1,26 @@
+
+
+  
+  <button class="btn btn-success" (click)="ifShow()">Dodaj magazyn</button>
+
+<div *ngIf="show === true" >
+
+<!-- 
+    <div class="form-group">
+        <label for="id_store">Oznaczenie</label>
+        <input [(ngModel)]="store.id_store" placeholder="id" name="id_store" class="form-control" id="id_store">
+      </div>
+       -->
+<br><br><br>
+    <div class="form-group">
+        <label for="name">Nazwa</label>
+        <input [(ngModel)]="store.name" placeholder="name" name="name" class="form-control" id="name">
+      </div>
+
+    <button class="btn btn-success" (click)="createStores()">Zapisz</button>
+
+  </div>
+
+
+
+
